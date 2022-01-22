@@ -1,0 +1,49 @@
+.contenedor-filtros {
+    width: 300px;
+    height: 346px;
+    margin: 0 42px;
+    object-fit: contain;
+    margin: 21px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  h3 {
+    width: 300px;
+    height: 18px;
+    margin: 0 0 42px;
+    opacity: 0.5;
+    font-family: Avenir-Roman;
+    font-size: 13px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: var(--dark);
+  }
+ 
+  label {
+    width: 268px;
+    height: 22px;
+    margin: 0 13px 12px 0;
+    font-family: Avenir-Roman;
+    font-size: 16px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: black;
+  }
+  select,
+  input {
+    width: 300px;
+    height: 36px;
+    //margin: 42px 0 25px;
+  }
+  .contenedor-rangos {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+  }
+}
