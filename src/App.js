@@ -67,7 +67,6 @@ const products = [
   },
 ];
 
-
 const App = () =>{
   return(
 <Section

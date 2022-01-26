@@ -1,6 +1,6 @@
 import "../styles/_Card.scss";
 
-const Card = ({ title, price, url, type, isAvailable, onSale, rating }) => {
+const Card = ({title, price, url, type, isAvailable, onSale, rating}) => {
   return (
     <div className={`card ${isAvailable === false && "no-disponible"}`}>
       <div className="contenedor-img">
