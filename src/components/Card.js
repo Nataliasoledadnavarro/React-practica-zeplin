@@ -1,4 +1,5 @@
 import "../styles/_Card.scss";
+import Stars from "../components/Stars"
 
 const Card = ({title, price, url, type, isAvailable, onSale, rating}) => {
   return (
@@ -11,7 +12,7 @@ const Card = ({title, price, url, type, isAvailable, onSale, rating}) => {
           {title} {onSale === true && <span>ON SALE</span>}
         </h2>
         <p className="type">{type}</p>
-        <p>stars: {rating}</p>
+        <Stars rating={rating}/>
       </div>
       <p className="precio">$ {price}</p>
       <button>
