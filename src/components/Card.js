@@ -1,10 +1,21 @@
 import "../styles/_Card.scss";
 import Stars from "../components/Stars"
 import {BsFillCartPlusFill as Carrito } from "react-icons/bs";
+import { useState } from "react";
 
 const Card = ({title, price, url, type, isAvailable, onSale, rating}) => {
+
+const [cambiarPosition, setCambiarPosition]=useState(false);
+const handleMouseEnter = () =>{
+  setCambiarPosition(true)
+}
+
+const handleMouseLeave = () =>{
+  setCambiarPosition(false)
+}
+
   return (
-    <div className={`card ${isAvailable === false && "no-disponible"}`}>
+    <div className={`card ${isAvailable === false && "no-disponible"} ${cambiarPosition && "position"}`} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
       <div className="contenedor-img">
         <img src={url} alt="" />
       </div>

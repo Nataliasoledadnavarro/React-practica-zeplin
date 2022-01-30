@@ -2,6 +2,7 @@
   width: 300px;
   height: 346px;
   margin:21px;
+
   .carrito{
     font-size: 22px;
   }
@@ -49,8 +50,12 @@
     margin: 3px;
     font-size: 12px;
   }
+ 
 }
-
+.position{
+  transform: scale(1.1);
+      transition: all 0.3s;
+}
 .no-disponible {
   opacity:0.3;
 }
