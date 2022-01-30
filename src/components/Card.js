@@ -1,5 +1,6 @@
 import "../styles/_Card.scss";
 import Stars from "../components/Stars"
+import {BsFillCartPlusFill as Carrito } from "react-icons/bs";
 
 const Card = ({title, price, url, type, isAvailable, onSale, rating}) => {
   return (
@@ -12,14 +13,11 @@ const Card = ({title, price, url, type, isAvailable, onSale, rating}) => {
           {title} {onSale === true && <span>ON SALE</span>}
         </h2>
         <p className="type">{type}</p>
-        <Stars rating={rating}/>
+        <p className= "contenedor-stars"><Stars rating={rating}/></p>
       </div>
       <p className="precio">$ {price}</p>
       <button>
-        <img
-          src="https://www.seekpng.com/png/small/986-9868123_png-file-icono-carrito-de-compras.png"
-          alt="icono carrito compra"
-        />
+      <Carrito className="carrito"/>
       </button>
     </div>
   );
