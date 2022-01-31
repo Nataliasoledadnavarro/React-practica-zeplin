@@ -1,11 +1,14 @@
 import "../styles/_Card.scss";
 import Stars from "../components/Stars"
+import Modal from "../components/Modal"
 import {BsFillCartPlusFill as Carrito } from "react-icons/bs";
 import { useState } from "react";
 
 const Card = ({title, price, url, type, isAvailable, onSale, rating}) => {
 
 const [cambiarPosition, setCambiarPosition]=useState(false);
+const [mostrarCarrito, setMostrarCarrito] = useState(false);
+
 const handleMouseEnter = () =>{
   setCambiarPosition(true)
 }
@@ -13,6 +16,11 @@ const handleMouseEnter = () =>{
 const handleMouseLeave = () =>{
   setCambiarPosition(false)
 }
+
+const handleClickCarrito = () =>{
+  setMostrarCarrito(true)
+}
+
 
   return (
     <div className={`card ${isAvailable === false && "no-disponible"} ${cambiarPosition && "position"}`} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
@@ -27,9 +35,10 @@ const handleMouseLeave = () =>{
         <p className= "contenedor-stars"><Stars rating={rating}/></p>
       </div>
       <p className="precio">$ {price}</p>
-      <button>
+      <button onClick={handleClickCarrito}>
       <Carrito className="carrito"/>
       </button>
+      {mostrarCarrito && <Modal titulo={title} precio={price}/>}
     </div>
   );
 };
