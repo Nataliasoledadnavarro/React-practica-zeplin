@@ -21,6 +21,10 @@ const handleClickCarrito = () =>{
   setMostrarCarrito(true)
 }
 
+const handleClickCerrar = () =>{
+  setMostrarCarrito(false)
+}
+
 
   return (
     <div className={`card ${isAvailable === false && "no-disponible"} ${cambiarPosition && "position"}`} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
@@ -38,7 +42,7 @@ const handleClickCarrito = () =>{
       <button onClick={handleClickCarrito}>
       <Carrito className="carrito"/>
       </button>
-      {mostrarCarrito && <Modal titulo={title} precio={price}/>}
+      {mostrarCarrito && <Modal titulo={title} precio={price} onClick={handleClickCerrar}/>}
     </div>
   );
 };
