@@ -3,7 +3,6 @@ import Filtros from "../components/Filtros.js";
 import "../styles/_Section.scss";
 
 const Section = (props) => {
-  console.log(props);
   const cards = props.array.map((producto) => {
     return (
       <Card

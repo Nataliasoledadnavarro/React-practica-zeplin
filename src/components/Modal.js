@@ -1,7 +1,6 @@
 import "../styles/_Modal.scss"
 import {BsFillFileExcelFill as Cruz } from "react-icons/bs";
-import setMostrarCarrito from "../components/Card";
-import { useState } from "react";
+
 
 const Modal = ({titulo,precio,onClick}) =>{
     

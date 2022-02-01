@@ -11,6 +11,7 @@ const [mostrarCarrito, setMostrarCarrito] = useState(false);
 
 const handleMouseEnter = () =>{
   setCambiarPosition(true)
+  setMostrarCarrito(false)
 }
 
 const handleMouseLeave = () =>{
@@ -18,11 +19,13 @@ const handleMouseLeave = () =>{
 }
 
 const handleClickCarrito = () =>{
-  setMostrarCarrito(true)
+  {isAvailable && setMostrarCarrito(true)
+    setCambiarPosition(false) }
 }
 
 const handleClickCerrar = () =>{
   setMostrarCarrito(false)
+  setCambiarPosition(true)
 }
 
 
